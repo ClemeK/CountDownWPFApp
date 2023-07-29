@@ -1,0 +1,42 @@
+﻿<Window x:Class="CountDownWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="CountDown Soloution" Height="500" Width="800" WindowStartupLocation="CenterScreen">
+
+    <StackPanel Background="AliceBlue">
+        <Label x:Name="lblTotalWords" Content="Total Words:" HorizontalAlignment="Center" />
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label Content="Min/Max Letters Count: " Padding="5" />
+            <ComboBox x:Name="cbMaxLetters" Padding="5" />
+            <Label Content="Count To: " Padding="5" />
+            <ComboBox x:Name="cbCountTo" Padding="5" />
+            <Label Content="Min Vowels/Consonant: " Padding="5" />
+            <ComboBox x:Name="cbMinVowels" Padding="5" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Button x:Name="btRandom" Content="Random" Padding="5" Click="RandomClick" />
+            <Label Content="Letters: " Padding="5" />
+            <TextBox x:Name="tbSelection" Width="250" Padding="5" TextChanged="SelectionChanged" />
+            <Label x:Name="lblLetterCount" Content="(0)" Padding="5" />
+            <Button x:Name="btSearch" Content="Search" Click="SearchClick" Padding="5" />
+            <Label x:Name="lblCompleted" Content="xXx" Padding="5" />
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Label Content="Vowel Count: " Padding="5" />
+            <Label x:Name="lblVowelCount" Content="0" Padding="5" />
+            <Label Content="Const Count: " Padding="5" />
+            <Label x:Name="lblConstCount" Content="0" Padding="5" />
+            <Label Content="Words found: " Padding="5" />
+            <Label x:Name="lblWordsFound" Content="0" Padding="5" />
+        </StackPanel>
+
+        <TextBox x:Name="tbResults" Text="xxx" Height="310" Background="Wheat"
+                 TextWrapping="Wrap" FontFamily="Times New Roman" Margin="5" FontSize="14" />
+    </StackPanel>
+</Window>
